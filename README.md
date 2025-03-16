@@ -11,5 +11,5 @@ A new Flutter project.
 3- --> flutter create --template=package enter_module_name_here
 3- --> flutter create --template=package data
 ============= OR ==============
-Lect-6-How-to-create-a-Module
+
 1- --> flutter create --template=package core/data
