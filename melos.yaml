@@ -19,22 +19,11 @@ command:
 
     dev_dependencies:
       build_runner: ^2.4.15
+      flutter_lints: ^5.0.0
 
 
-# Define dependency version constraints that will apply across the workspace
-#dependencies:
-##  shared_dependencies:
-##    dio: ^5.0.0
-## Centralized dev dependencies
-#dev_dependencies:
-#  flutter_test:
-#    sdk: flutter
-#
-#dependency_overrides:
-#  dio: ^5.0.0
-
-  # Optional: Define scripts to run tasks across the workspace
 scripts:
-  bootstrap: melos bootstrap
+#  bootstrap: melos bootstrap
   clean: melos clean
-  update: dart pub outdated
+  update: flutter pub outdated
+  upgrade: flutter pub upgrade --major-versions
