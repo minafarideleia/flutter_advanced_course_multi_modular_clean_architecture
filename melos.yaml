@@ -1,0 +1,26 @@
+name: flutter_advanced_course_multi_modular_clean_architecture
+packages:
+  # Include all modules in the workspace
+  #  - 'core'
+  #  - 'feature1'
+  #  - 'feature2'
+  # You can also use wildcards for flexibility, like:
+  - core/**
+  - features/**
+
+# Define dependency version constraints that will apply across the workspace
+dependencies:
+#  shared_dependencies:
+#    dio: ^5.0.0
+# Centralized dev dependencies
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+dependency_overrides:
+  dio: ^5.0.0
+
+  # Optional: Define scripts to run tasks across the workspace
+scripts:
+  bootstrap: melos bootstrap
+  clean: melos clean
