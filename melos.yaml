@@ -27,3 +27,7 @@ scripts:
   clean: melos clean
   update: flutter pub outdated
   upgrade: flutter pub upgrade --major-versions
+  cleanAndBootstrap:
+    run: melos run clean && melos bootstrap
+  test:
+    run: flutter test
