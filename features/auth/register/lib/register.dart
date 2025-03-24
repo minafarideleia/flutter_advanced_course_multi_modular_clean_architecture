@@ -1,4 +1,4 @@
-library register;
+library;
 
 /// A Calculator.
 class Calculator {

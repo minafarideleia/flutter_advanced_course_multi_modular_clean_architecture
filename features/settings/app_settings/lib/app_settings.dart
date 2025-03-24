@@ -1,4 +1,4 @@
-library app_settings;
+library;
 
 /// A Calculator.
 class Calculator {

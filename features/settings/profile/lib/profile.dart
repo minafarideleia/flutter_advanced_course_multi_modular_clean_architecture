@@ -1,4 +1,4 @@
-library profile;
+library;
 
 /// A Calculator.
 class Calculator {

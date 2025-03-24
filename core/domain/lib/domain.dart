@@ -1,4 +1,4 @@
-library domain;
+library;
 
 /// A Calculator.
 class Calculator {
