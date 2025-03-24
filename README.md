@@ -21,4 +21,4 @@ A new Flutter project.
 4- dart pub outdated
 5- dart pub upgrade --major-versions
 6- open  ~/.zshrc   
-7- export PATH="$JAVA_HOME/bin:$PATH:$HOME/.pub-cache/bin"
+7- export PATH="$JAVA_HOME/bin:$PATH:$HOME/.pub-cache/bin" // copy and paste it in .zshrc   
