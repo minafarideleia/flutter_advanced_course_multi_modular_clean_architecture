@@ -13,3 +13,12 @@ A new Flutter project.
 ============= OR ==============
 
 1- --> flutter create --template=package core/data
+
+=============================
+1- dart pub add melos
+2- dart pub global activate melos
+3- export PATH="$PATH":"$HOME/.pub-cache/bin"
+4- dart pub outdated
+5- dart pub upgrade --major-versions
+6- open  ~/.zshrc   
+7- export PATH="$JAVA_HOME/bin:$PATH:$HOME/.pub-cache/bin"
