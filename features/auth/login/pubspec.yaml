@@ -2,12 +2,16 @@ name: login
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
   sdk: ^3.5.3
   flutter: ">=1.17.0"
 
 dependencies:
+  dio: ^5.8.0+1
+  data:
+    path: ../../../core/data
   flutter:
     sdk: flutter
 
