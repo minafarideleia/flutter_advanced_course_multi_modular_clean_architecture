@@ -20,6 +20,11 @@ scripts:
   clean: melos clean
   cleanAndBootstrap: melos clean && melos bootstrap
   test:
-    run: flutter test
+#    run: melos exec --concurrency=1 -- flutter test --reporter expanded
+    run: melos exec flutter test
+    #--concurrency=1 → Runs tests one module at a time, avoiding Flutter startup locks.
+    #
+    #--reporter expanded → Ensures all test descriptions & assertions are printed
+
   update: flutter pub outdated
   upgrade: flutter pub upgrade --major-versions
