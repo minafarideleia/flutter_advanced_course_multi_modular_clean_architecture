@@ -2,6 +2,7 @@ name: login
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+publish_to: none  # This marks the package as not for publishing
 
 environment:
   sdk: ^3.5.3
@@ -10,7 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  data:
+    path: ../../../core/data
 dev_dependencies:
   flutter_test:
     sdk: flutter
