@@ -20,6 +20,6 @@ scripts:
   clean: melos clean
   cleanAndBootstrap: melos clean && melos bootstrap
   test:
-    run: flutter test
+    run: melos exec --concurrency=1 -- flutter test
   update: flutter pub outdated
   upgrade: flutter pub upgrade --major-versions
