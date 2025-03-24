@@ -2,7 +2,7 @@ name: flutter_advanced_course_multi_modular_clean_architecture
 packages:
   - core/**
   - features/**
-
+#  - features/movies
 
 command:
   bootstrap:
