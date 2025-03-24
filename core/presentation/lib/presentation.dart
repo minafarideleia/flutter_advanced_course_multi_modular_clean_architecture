@@ -1,4 +1,4 @@
-library presentation;
+library;
 
 /// A Calculator.
 class Calculator {

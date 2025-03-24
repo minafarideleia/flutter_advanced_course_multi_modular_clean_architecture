@@ -1,4 +1,4 @@
-library movies;
+library;
 
 /// A Calculator.
 class Calculator {

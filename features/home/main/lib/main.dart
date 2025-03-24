@@ -1,4 +1,4 @@
-library main;
+library;
 
 /// A Calculator.
 class Calculator {
