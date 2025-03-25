@@ -12,8 +12,14 @@ command:
 
     dependencies:
       dio: ^5.8.0+1
+      get_it: ^8.0.3
+      injectable: ^2.5.0
+      json_annotation: ^4.9.0
 
     dev_dependencies:
+      injectable_generator: ^2.7.0
+      json_serializable: ^6.9.4
+      build_runner: ^2.4.15
       flutter_lints: ^5.0.0
 
 scripts:
