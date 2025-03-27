@@ -30,6 +30,9 @@ environment:
 dependencies:
   app_settings:
     path: features/settings/app_settings
+  datastore:
+    path: core/datastore
+
   get_it:
   flutter:
     sdk: flutter

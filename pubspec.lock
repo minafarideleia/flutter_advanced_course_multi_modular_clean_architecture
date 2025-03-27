@@ -224,6 +224,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  datastore:
+    dependency: "direct main"
+    description:
+      path: "core/datastore"
+      relative: true
+    source: path
+    version: "0.0.1"
   fake_async:
     dependency: transitive
     description:
