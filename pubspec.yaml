@@ -28,8 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  app_settings:
+    path: features/settings/app_settings
   get_it:
-  injectable:
   flutter:
     sdk: flutter
 

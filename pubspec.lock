@@ -25,6 +25,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.2+1"
+  app_settings:
+    dependency: "direct main"
+    description:
+      path: "features/settings/app_settings"
+      relative: true
+    source: path
+    version: "0.0.1"
   args:
     dependency: transitive
     description:
@@ -316,7 +323,7 @@ packages:
     source: hosted
     version: "4.1.2"
   injectable:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: injectable
       sha256: "5e1556ea1d374fe44cbe846414d9bab346285d3d8a1da5877c01ad0774006068"
