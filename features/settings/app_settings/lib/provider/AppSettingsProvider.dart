@@ -1,5 +1,5 @@
 
 abstract class AppSettingsProvider{
   String getAppLanguage();
-  String themeType();
+  String getThemeType();
 }
