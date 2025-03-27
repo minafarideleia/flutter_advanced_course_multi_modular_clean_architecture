@@ -28,6 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  get_it:
+  injectable:
   flutter:
     sdk: flutter
 
@@ -38,6 +40,8 @@ dependencies:
   melos: ^6.3.2
 
 dev_dependencies:
+  injectable_generator:
+  build_runner:
   flutter_test:
     sdk: flutter
 
