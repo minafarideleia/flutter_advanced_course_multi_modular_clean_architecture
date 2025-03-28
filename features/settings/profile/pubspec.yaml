@@ -8,6 +8,8 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  flutter_advanced_course_multi_modular_clean_architecture:
+    path: ../../..
   flutter:
     sdk: flutter
 
