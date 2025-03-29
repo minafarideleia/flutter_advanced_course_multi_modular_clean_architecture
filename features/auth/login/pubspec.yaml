@@ -10,6 +10,7 @@ environment:
 
 dependencies:
   dio: ^5.8.0+1
+  retrofit: ^4.4.2
   datastore:
     path: ../../../core/datastore
   data:
@@ -21,6 +22,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  retrofit_generator: ^9.1.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
