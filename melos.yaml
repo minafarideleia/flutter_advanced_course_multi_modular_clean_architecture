@@ -15,6 +15,7 @@ command:
       get_it: ^8.0.3
       injectable: ^2.5.0
       json_annotation: ^4.9.0
+      pretty_dio_logger: ^1.4.0
 
     dev_dependencies:
       injectable_generator: ^2.7.0
