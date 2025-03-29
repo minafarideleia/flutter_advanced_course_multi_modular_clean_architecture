@@ -16,9 +16,11 @@ command:
       injectable: ^2.5.0
       json_annotation: ^4.9.0
       pretty_dio_logger: ^1.4.0
+      retrofit: ^4.4.2
 
     dev_dependencies:
       injectable_generator: ^2.7.0
+      retrofit_generator: ^9.1.9
       json_serializable: ^6.9.4
       build_runner: ^2.4.15
       flutter_lints: ^5.0.0
