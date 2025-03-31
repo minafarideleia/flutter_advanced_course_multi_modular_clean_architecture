@@ -19,6 +19,8 @@ dependencies:
     path: ../../../core/datastore
   data:
     path: ../../../core/data
+  extensions:
+    path: ../../../core/extensions
   flutter:
     sdk: flutter
 
