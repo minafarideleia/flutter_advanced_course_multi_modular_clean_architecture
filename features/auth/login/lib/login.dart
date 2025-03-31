@@ -3,11 +3,12 @@ library;
 import 'package:datastore/provider/SessionProvider.dart';
 import 'package:datastore/provider/SessionProviderImpl.dart';
 import 'package:dio/dio.dart';
+import 'package:domain/model/failure.dart';
 
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
   int addOne(int value) => value + 1;
-  var session  = DevSessionProviderImpl();
+  var session = DevSessionProviderImpl();
   Dio dio = Dio();
 }
