@@ -17,6 +17,7 @@ command:
       json_annotation: ^4.9.0
       pretty_dio_logger: ^1.4.0
       retrofit: ^4.4.2
+      dartz: ^0.10.1
 
     dev_dependencies:
       injectable_generator: ^2.7.0
