@@ -8,8 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  dartz: ^0.10.1
   dio: ^5.8.0+1
   pretty_dio_logger: ^1.4.0
+  domain:
+    path: ../../core/domain
   flutter:
     sdk: flutter
 
