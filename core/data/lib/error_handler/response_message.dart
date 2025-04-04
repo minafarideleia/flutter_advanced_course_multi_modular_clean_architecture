@@ -6,6 +6,7 @@ class ResponseMessage {
   static const String badRequest = AppStrings.badRequest;
   static const String unauthorised = AppStrings.unauthorised;
   static const String internalServerError = AppStrings.internalServerError;
+  static const String forbidden = AppStrings.forbidden;
 
   // local error form app
   static const String connectTimeOut = AppStrings.connectTimeOut;
