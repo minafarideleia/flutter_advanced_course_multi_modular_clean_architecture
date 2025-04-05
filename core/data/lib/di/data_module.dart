@@ -1,4 +1,5 @@
 import 'package:data/factory/dio_factory.dart';
+import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -33,6 +34,4 @@ abstract class DataModule {
 
     return dioFactory.getDio();
   }
-
-
 }
