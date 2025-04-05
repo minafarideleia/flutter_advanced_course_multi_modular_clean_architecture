@@ -2,7 +2,7 @@ name: data
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
-
+publish_to: none
 environment:
   sdk: ^3.5.3
   flutter: ">=1.17.0"
@@ -14,6 +14,8 @@ dependencies:
   dartz: ^0.10.1
   dio: ^5.8.0+1
   pretty_dio_logger: ^1.4.0
+  datastore:
+    path: ../../core/datastore
   domain:
     path: ../../core/domain
   flutter:
