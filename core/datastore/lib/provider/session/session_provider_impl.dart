@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 
-import 'SessionProvider.dart';
+import 'session_provider.dart';
 
 @Injectable(as: SessionProvider, env: [Environment.prod])
 class ProdSessionProviderImpl extends SessionProvider {

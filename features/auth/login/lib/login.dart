@@ -1,9 +1,7 @@
 library;
 
-import 'package:datastore/provider/SessionProvider.dart';
-import 'package:datastore/provider/SessionProviderImpl.dart';
+import 'package:datastore/provider/session/session_provider_impl.dart';
 import 'package:dio/dio.dart';
-import 'package:domain/model/failure.dart';
 
 /// A Calculator.
 class Calculator {

@@ -1,5 +1,5 @@
 import 'package:app_settings/provider/AppSettingsProvider.dart';
-import 'package:datastore/provider/SessionProvider.dart';
+import 'package:datastore/provider/session/session_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
@@ -109,14 +109,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-              Text(
+            Text(
               'App Language: ${appSettingsProvider.getAppLanguage()}',
             ),
             Text(
-                'App Theme: ${appSettingsProvider.getThemeType()}',
+              'App Theme: ${appSettingsProvider.getThemeType()}',
               style: Theme.of(context).textTheme.headlineMedium,
-            ),  Text(
-                'Session ClientId: ${sessionProvider.getClientId()}',
+            ),
+            Text(
+              'Session ClientId: ${sessionProvider.getClientId()}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
