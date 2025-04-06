@@ -32,7 +32,8 @@ dependencies:
     path: features/settings/app_settings
   datastore:
     path: core/datastore
-
+  data:
+    path: core/data
   get_it:
   flutter:
     sdk: flutter
