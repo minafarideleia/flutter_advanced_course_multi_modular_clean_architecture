@@ -8,9 +8,10 @@ import 'package:injectable/injectable.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit()
-void configureDependencies(String? environment) {
+Future<void> configureDependencies(String? environment) async {
+  await configureAppSettingsDependencies(getIt, environment);
+  await configureDataStoreDependencies(getIt, environment);
+  await configureCoreDataDependencies(getIt, environment);
+
   getIt.init(environment: environment);
-  configureAppSettingsDependencies(getIt, environment);
-  configureDataStoreDependencies(getIt, environment);
-  configureCoreDataDependencies(getIt, environment);
 }
