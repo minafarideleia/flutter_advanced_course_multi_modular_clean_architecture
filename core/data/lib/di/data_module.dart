@@ -10,18 +10,6 @@ import 'data_module_keys.dart';
 
 @module
 abstract class DataModule {
-  @preResolve
-  Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
-
-  @lazySingleton
-  PreferencesProvider providePreferencesProviderImpl(SharedPreferences prefs) =>
-      PreferencesProviderImpl(prefs);
-
-  // todo check me if still need it
-  // @lazySingleton
-  // SessionProvider provideSessionProviderImpl(SharedPreferences prefs) =>
-  //     SessionProviderImpl(prefs);
-
   // provide base url
   @Named(DataModuleKeys.baseUrl) // a tag for this string
   String provideBaseUrl(PreferencesProvider preferencesProvider) =>
