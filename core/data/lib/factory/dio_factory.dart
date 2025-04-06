@@ -14,7 +14,7 @@ class DioFactory {
     required this.language,
   });
 
-  Future<Dio> getDio() async {
+  Dio getDio() {
     Dio dio = Dio();
 
     Map<String, String> headers = {
