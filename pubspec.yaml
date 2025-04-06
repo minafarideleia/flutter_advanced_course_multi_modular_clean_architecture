@@ -34,6 +34,8 @@ dependencies:
     path: core/datastore
   data:
     path: core/data
+  login:
+    path: features/auth/login
   get_it:
   flutter:
     sdk: flutter
