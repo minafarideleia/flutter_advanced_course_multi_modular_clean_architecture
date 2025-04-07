@@ -13,7 +13,7 @@ class AppStrings {
   static const String receiveTimeOut = "receive_time_out";
   static const String sendTimeOut = "send_time_out";
   static const String cacheError = "cache_error";
-  static const String noInternetConnection = "no_internet_connection";
+  static const String noInternetConnection = "no_internet_connection_test";
   static const String defaultError =
       "default_error"; // something went wrong try again later (english/arabic)
 }
