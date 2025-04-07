@@ -22,6 +22,8 @@ dependencies:
     path: ../../../core/data
   extensions:
     path: ../../../core/extensions
+  flutter_advanced_course_multi_modular_clean_architecture:
+    path: ../../..
   flutter:
     sdk: flutter
 
