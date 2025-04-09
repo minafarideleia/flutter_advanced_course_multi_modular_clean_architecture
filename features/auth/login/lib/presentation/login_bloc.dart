@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login/presentation/login_event.dart';
 import 'package:login/presentation/login_state.dart';
 
+import '../data/request/login_request.dart';
 import '../domain/usecase/login_usecase.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
@@ -27,8 +28,32 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     });
 
     // handle PasswordChanged event
-    on<LoginButtonPressed>((event, emit) {
+    on<LoginButtonPressed>((event, emit) async{
       // do the logic here
+      final usernameError = validateUsername(event.username);
+      final passwordError = validateUsername(event.password);
+      if (usernameError == null && passwordError == null) {
+        // its safe to call login API
+        emit(LoginLoading());
+
+        final loginRequest = LoginRequest("mina@gmail.com", "123456");
+
+        final result = await loginUseCase.execute(loginRequest);
+        result.fold((failure) {
+          // emit error
+          emit(LoginError(errorMessage: failure.message));
+
+        }, (loginModel) {
+          // emit success
+          print("Login Success: ${loginModel.name}");
+          emit(LoginSuccess());
+        });
+
+      } else {
+        // show invalid state
+        emit(LoginInvalid(
+            passwordError: passwordError, usernameError: usernameError));
+      }
     });
   }
 }
