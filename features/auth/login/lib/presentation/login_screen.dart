@@ -9,6 +9,7 @@ import 'package:login/presentation/login_state.dart';
 class LoginScreen extends StatelessWidget {
   final loginUseCase = getIt<LoginUseCase>();
   final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   LoginScreen({super.key});
 
@@ -35,6 +36,16 @@ class LoginScreen extends StatelessWidget {
                       labelText: "Username",
                       errorText:
                           state is LoginInvalid ? state.usernameError : null),
+                ),
+                TextField(
+                  controller: passwordController,
+                  onChanged: (value) {
+                    context.read<LoginBloc>().add(PasswordChanged(value));
+                  },
+                  decoration: InputDecoration(
+                      labelText: "Password",
+                      errorText:
+                          state is LoginInvalid ? state.passwordError : null),
                 )
               ],
             ),
