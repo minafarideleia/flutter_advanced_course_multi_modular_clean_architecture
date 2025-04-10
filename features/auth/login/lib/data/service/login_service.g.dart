@@ -10,7 +10,8 @@ part of 'login_service.dart';
 
 class _LoginService implements LoginService {
   _LoginService(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'https://minafarid.mocklab.io';
+    baseUrl ??=
+        'https://api.mockfly.dev/mocks/98322c65-d004-4282-8967-3353907e2c39';
   }
 
   final Dio _dio;
