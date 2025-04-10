@@ -7,7 +7,7 @@ import '../response/login_response.dart';
 
 part 'login_service.g.dart';
 
-const String baseUrl = "https://minafarid.mocklab.io";
+const String baseUrl = "https://api.mockfly.dev/mocks/98322c65-d004-4282-8967-3353907e2c39";
 
 @RestApi(baseUrl: baseUrl)
 abstract class LoginService {

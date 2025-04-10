@@ -25,8 +25,8 @@ Failure handleError(DioException error) {
       return DataSource.receiveTimeOut.getFailure();
     case DioExceptionType.badCertificate:
       return DataSource.defaultError.getFailure();
-    case DioExceptionType.badResponse:
-      return DataSource.defaultError.getFailure();
+    // case DioExceptionType.badResponse:
+    //   return DataSource.defaultError.getFailure();
     case DioExceptionType.cancel:
       return DataSource.cancelled.getFailure();
     case DioExceptionType.connectionError:
