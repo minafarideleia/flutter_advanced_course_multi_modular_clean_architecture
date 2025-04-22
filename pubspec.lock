@@ -666,6 +666,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+  presentation:
+    dependency: transitive
+    description:
+      path: "core/presentation"
+      relative: true
+    source: path
+    version: "0.0.1"
   pretty_dio_logger:
     dependency: transitive
     description:
