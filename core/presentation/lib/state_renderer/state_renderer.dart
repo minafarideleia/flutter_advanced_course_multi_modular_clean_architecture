@@ -23,8 +23,7 @@ class StateRenderer extends StatelessWidget {
       case StateRendererType.popupErrorState:
         return _showPopupErrorDialog(context, _buildErrorWidget());
       case StateRendererType.fullScreenLoadingState:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+        return _showFullScreenLoading(_buildLoadingWidget());
       case StateRendererType.fullScreenErrorState:
         // TODO: Handle this case.
         throw UnimplementedError();
@@ -82,6 +81,11 @@ class StateRenderer extends StatelessWidget {
         Text(message)
       ],
     );
+  }
+
+  Widget _showFullScreenLoading(Widget buildLoadingWidget) {
+    return Container(
+        color: Colors.white, child: Center(child: buildLoadingWidget));
   }
 
   Widget _showPopupErrorDialog(BuildContext context, Widget content) {
