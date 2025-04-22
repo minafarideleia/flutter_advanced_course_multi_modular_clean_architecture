@@ -10,19 +10,42 @@ class StateRenderer extends StatelessWidget {
   var _isDialogShowing = false;
   final VoidCallback? retryActionFunction;
 
-  StateRenderer({super.key,
-    required this.stateRendererType,
-    this.message = "Loading...",
-    this.title = "Error",
-    this.retryActionFunction});
+  StateRenderer(
+      {super.key,
+      required this.stateRendererType,
+      this.message = "Loading...",
+      this.title = "Error",
+      this.retryActionFunction});
 
   @override
   Widget build(BuildContext context) {
+    if (_isDialogShowing) {
+      // because its rebuild again the screen when showing the dilaog so i put this condition to not show duplicated dialogs
+      _isDialogShowing = false;
+      return Container();
+    }
+
+    if (_isDialogDismissed) {
+      // because its rebuild again the screen when dismissing the dilaog so i put this condition to not show duplicated dialogs
+      _isDialogDismissed = false;
+      return Container();
+    }
+
+    // as a precaution only to dismiss any dilaog, to dimiss the dialog in case of showing the content of the screen
+    if (_isThereCurrentDialogShowing(context)) {
+      Navigator.of(context, rootNavigator: true).pop(true);
+    }
+
     switch (stateRendererType) {
       case StateRendererType.popupLoadingState:
         return _showPopupLoadingDialog(context, _buildLoadingWidget());
       case StateRendererType.popupErrorState:
-        return _showPopupErrorDialog(context, _buildErrorWidget());
+        if (_isThereCurrentDialogShowing(context)) {
+          Navigator.of(context, rootNavigator: true).pop(true);
+          return Container();
+        } else {
+          return _showPopupErrorDialog(context, _buildErrorWidget());
+        }
       case StateRendererType.fullScreenLoadingState:
         return _showFullScreenContent(_buildLoadingWidget());
       case StateRendererType.fullScreenErrorState:
@@ -30,19 +53,14 @@ class StateRenderer extends StatelessWidget {
       case StateRendererType.emptyState:
         return _showFullScreenContent(_buildEmptyWidget());
       case StateRendererType.contentState:
-      // TODO: Handle this case.
-        throw UnimplementedError();
-      case StateRendererType.none:
-      // TODO: Handle this case.
-        throw UnimplementedError();
+      default:
+        return Container(); // return empty container by default
     }
   }
 
   // it will check if we are displaying a dialog.
   _isThereCurrentDialogShowing(BuildContext context) =>
-      ModalRoute
-          .of(context)
-          ?.isCurrent != true;
+      ModalRoute.of(context)?.isCurrent != true;
 
   Widget _buildLoadingWidget() {
     return Column(
@@ -59,13 +77,11 @@ class StateRenderer extends StatelessWidget {
     if (!_isThereCurrentDialogShowing(context)) {
       _isDialogShowing = true;
 
-      WidgetsBinding.instance.addPersistentFrameCallback((_) =>
-          showDialog(
-              context: context,
-              builder: (context) =>
-                  AlertDialog(
-                    content: content,
-                  )));
+      WidgetsBinding.instance.addPersistentFrameCallback((_) => showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                content: content,
+              )));
     }
     return Container(); // keep screen content behind the dialog
   }
@@ -74,10 +90,14 @@ class StateRenderer extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(Icons.inbox,
+        Icon(
+          Icons.inbox,
           size: 50,
-          color: Colors.grey,),
-        SizedBox(height: 10,),
+          color: Colors.grey,
+        ),
+        SizedBox(
+          height: 10,
+        ),
         Text("No Data Available")
       ],
     );
@@ -113,22 +133,20 @@ class StateRenderer extends StatelessWidget {
     if (!_isThereCurrentDialogShowing(context)) {
       _isDialogShowing = true;
 
-      WidgetsBinding.instance.addPersistentFrameCallback((_) =>
-          showDialog(
-              context: context,
-              builder: (context) =>
-                  AlertDialog(
-                    content: content,
-                    actions: [
-                      TextButton(
-                          onPressed: () {
-                            _isDialogDismissed = true;
-                            Navigator.of(context, rootNavigator: true)
-                                .pop(true); // dismiss the dialog
-                          },
-                          child: Text("Close"))
-                    ],
-                  )));
+      WidgetsBinding.instance.addPersistentFrameCallback((_) => showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                content: content,
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        _isDialogDismissed = true;
+                        Navigator.of(context, rootNavigator: true)
+                            .pop(true); // dismiss the dialog
+                      },
+                      child: Text("Close"))
+                ],
+              )));
     }
     return Container(); // keep screen content behind the dialog
   }
