@@ -1,4 +1,4 @@
-enum NavigationTypes{
+enum NavigationType{
   push,
   replace,
   pop
