@@ -8,7 +8,7 @@ class NavigateToLogin extends NavigationEvent {}
 
 class NavigateToRoute extends NavigationEvent {
   final String route;
-  final NavigationTypes navigationType;
+  final NavigationType navigationType;
 
   NavigateToRoute(this.route, this.navigationType);
 }
