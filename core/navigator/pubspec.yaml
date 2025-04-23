@@ -2,12 +2,20 @@ name: navigator
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.5.3
   flutter: ">=1.17.0"
 
 dependencies:
+  flutter_bloc: ^9.1.0
+  flutter_advanced_course_multi_modular_clean_architecture:
+    path: ../..
+  main:
+    path: ../../features/home/main
+  login:
+    path: ../../features/auth/login
   flutter:
     sdk: flutter
 
