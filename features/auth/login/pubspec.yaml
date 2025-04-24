@@ -16,6 +16,8 @@ dependencies:
   dartz: ^0.10.1
   retrofit: ^4.4.2
   json_annotation: ^4.9.0
+  navigator:
+    path: ../../../core/navigator
   presentation:
     path: ../../../core/presentation
   domain:
