@@ -8,6 +8,8 @@ import 'package:login/presentation/login_event.dart';
 import 'package:login/presentation/login_state.dart';
 import 'package:navigator/navigation_bloc.dart';
 import 'package:navigator/navigation_event.dart';
+import 'package:navigator/navigation_routes.dart';
+import 'package:navigator/navigation_types.dart';
 import 'package:presentation/state_renderer/state_renderer.dart';
 import 'package:presentation/state_renderer/state_renderer_type.dart';
 
@@ -45,8 +47,11 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  void _navigateToHome(BuildContext context){
-    context.read<NavigationBloc>().add(NavigateToHome());
+  void _navigateToHome(BuildContext context) {
+    // context.read<NavigationBloc>().add(NavigateToHome());
+    context
+        .read<NavigationBloc>()
+        .add(NavigateToRoute(NavigationRoutes.home, NavigationType.push));
   }
 
   Widget _buildMainScreenContent(BuildContext context, LoginState state) {
