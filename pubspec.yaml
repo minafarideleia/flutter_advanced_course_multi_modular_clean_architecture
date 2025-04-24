@@ -32,6 +32,8 @@ dependencies:
     path: features/settings/app_settings
   datastore:
     path: core/datastore
+  navigator:
+     path: core/navigator
   data:
     path: core/data
   login:
