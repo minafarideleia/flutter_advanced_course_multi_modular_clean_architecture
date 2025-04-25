@@ -48,10 +48,10 @@ class LoginScreen extends StatelessWidget {
   }
 
   void _navigateToHome(BuildContext context) {
-    // context.read<NavigationBloc>().add(NavigateToHome());
-    context
-        .read<NavigationBloc>()
-        .add(NavigateToRoute(NavigationRoutes.main, NavigationType.push));
+    context.read<NavigationBloc>().add(NavigateToMain());
+    // context
+    //     .read<NavigationBloc>()
+    //     .add(NavigateToRoute(NavigationRoutes.main, NavigationType.push));
   }
 
   Widget _buildMainScreenContent(BuildContext context, LoginState state) {
