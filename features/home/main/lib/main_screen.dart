@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:main/main_bloc.dart';
 import 'package:main/main_event.dart';
 import 'package:main/main_state.dart';
-import 'package:movies/movies_screen.dart';
+import 'package:movies/presentation/movies_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
