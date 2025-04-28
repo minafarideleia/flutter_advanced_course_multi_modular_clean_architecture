@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:movies/domain/model/movie.dart';
 import 'package:presentation/state_renderer/state_renderer_type.dart';
 
 class MoviesState extends Equatable {
@@ -33,7 +34,9 @@ class MoviesLoading extends MoviesState {
 
 // success state
 class MoviesSuccess extends MoviesState {
-  const MoviesSuccess()
+  List<Movie> movies;
+
+  MoviesSuccess({required this.movies})
       : super(stateRendererType: StateRendererType.contentState);
 }
 

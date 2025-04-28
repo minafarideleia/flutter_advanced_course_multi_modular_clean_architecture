@@ -5,12 +5,12 @@ import 'package:movies/domain/model/movie.dart';
 import 'package:movies/domain/repository/movies_repository.dart';
 
 class MoviesUseCase implements BaseUseCase<String, List<Movie>> {
-  final MoviesRepository moviesRepository;
+  final MoviesRepository _moviesRepository;
 
-  MoviesUseCase(this.moviesRepository);
+  MoviesUseCase(this._moviesRepository);
 
   @override
   Future<Either<Failure, List<Movie>>> execute(String input) async {
-    return await moviesRepository.getMovies();
+    return await _moviesRepository.getMovies();
   }
 }
