@@ -578,7 +578,7 @@ packages:
     source: hosted
     version: "2.0.0"
   movies:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "features/movies"
       relative: true
