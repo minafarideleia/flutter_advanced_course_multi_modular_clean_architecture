@@ -38,6 +38,8 @@ dependencies:
     path: core/data
   login:
     path: features/auth/login
+  movies:
+    path: features/movies
   get_it:
   flutter:
     sdk: flutter
