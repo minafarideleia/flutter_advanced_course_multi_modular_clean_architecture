@@ -31,7 +31,6 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final loginModule = _$LoginModule();
-    gh.lazySingleton<_i131.NetworkInfo>(() => loginModule.provideNetworkInfo());
     gh.lazySingleton<_i762.LoginService>(
         () => loginModule.provideLoginService(gh<_i361.Dio>()));
     gh.lazySingleton<_i286.LoginRemoteDataSource>(
