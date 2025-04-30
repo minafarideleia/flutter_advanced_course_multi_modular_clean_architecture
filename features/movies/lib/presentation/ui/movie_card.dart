@@ -56,18 +56,18 @@ class MovieCard extends StatelessWidget {
               movie.title,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8.0),
             child: Text(
               movie.releaseDate,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
               style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 14,
+                  fontSize: 10,
                   fontWeight: FontWeight.bold),
             ),
           )
