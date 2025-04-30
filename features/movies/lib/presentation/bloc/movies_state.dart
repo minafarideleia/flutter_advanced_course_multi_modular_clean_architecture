@@ -32,6 +32,13 @@ class MoviesLoading extends MoviesState {
       : super(stateRendererType: StateRendererType.fullScreenLoadingState);
 }
 
+// loading state
+class MoviesEmpty extends MoviesState {
+  const MoviesEmpty()
+      : super(stateRendererType: StateRendererType.emptyState);
+}
+
+
 // success state
 class MoviesSuccess extends MoviesState {
   List<Movie> movies;

@@ -23,7 +23,11 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     }, (movies) {
       // emit success
       print("Movies Success: ${movies.length}");
-      emit(MoviesSuccess(movies: movies));
+      if (movies.isEmpty) {
+        emit(MoviesEmpty());
+      } else {
+        emit(MoviesSuccess(movies: movies));
+      }
     });
   }
 }
