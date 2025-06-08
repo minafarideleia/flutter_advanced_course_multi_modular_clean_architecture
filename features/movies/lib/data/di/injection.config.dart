@@ -13,10 +13,11 @@ import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:movies/data/di/movies_module.dart' as _i442;
-import 'package:movies/data/remote/movies_remote_data_source.dart' as _i835;
 import 'package:movies/data/service/movies_service.dart' as _i809;
 import 'package:movies/domain/repository/movies_repository.dart' as _i591;
 import 'package:movies/domain/usecase/movies_usecase.dart' as _i365;
+
+import '../source/remote/movies_remote_data_source.dart' as _i835;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
