@@ -4,10 +4,10 @@ import 'package:injectable/injectable.dart';
 
 import '../../domain/repository/movies_repository.dart';
 import '../../domain/usecase/movies_usecase.dart';
-import '../remote/movies_remote_data_source.dart';
-import '../remote/movies_remote_data_source_impl.dart';
 import '../repository/movies_repository_impl.dart';
 import '../service/movies_service.dart';
+import '../source/remote/movies_remote_data_source.dart';
+import '../source/remote/movies_remote_data_source_impl.dart';
 
 @module
 abstract class MoviesModule {
