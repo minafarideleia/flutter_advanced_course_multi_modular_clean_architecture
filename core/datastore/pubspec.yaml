@@ -16,7 +16,7 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  injectable_generator: ^2.7.0
+  injectable_generator: ^2.6.2
   build_runner: ^2.4.15
   flutter_test:
     sdk: flutter
